@@ -1,9 +1,11 @@
 import styled from 'styled-components';
+import { primaryColor, secondaryColor } from '../../common-app/theme/app.style';
 
-const primaryColor = '#4F6228';
-const secondaryColor = '#8C9954';
-const tertiaryColor = '#E8EAC9';
-
+export const FeatureRecipeTitle = styled.h1`
+  display: flex;
+  justify-content: center;
+  color: ${primaryColor};
+`;
 export const FeatureRecipeContainer = styled.div`
   display: flex;
   justify-content: center;

@@ -14,8 +14,11 @@
     "esModuleInterop": true,
     "baseUrl": "./src/",
     "paths": {
+      "common-app": ["common-app"],
       "core": ["core"],
-      "scenes": ["scenes"]
+      "scenes": ["scenes"],
+      "pods": ["pods"],
+      "layouts": ["layouts"]
     }
   },
   "include": ["./src/**/*", "./config/test/setup.ts", "./global.types.d.ts"]

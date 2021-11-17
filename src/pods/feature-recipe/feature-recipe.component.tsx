@@ -2,6 +2,7 @@ import React from 'react';
 import { FeatureRecipe } from './feature-recipe.vm';
 import {
   FeatureRecipeContainer,
+  FeatureRecipeTitle,
   RecipeCardContainer,
   RecipeCardImage,
   RecipeCardInfo,
@@ -10,10 +11,10 @@ import {
   RecipeCardTitle,
   RecipeCardDishType,
 } from './feature-recipe.style';
-import Typography from '@mui/material/Typography';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faStar } from '@fortawesome/free-solid-svg-icons';
 import StarRatingComponent from 'react-star-rating-component';
+import { primaryColor, tertiaryColor } from '../../common-app/theme/app.style';
 
 interface Props {
   list: FeatureRecipe[];
@@ -26,15 +27,9 @@ function formatRating(rating) {
 export const FeatureRecipeList: React.FC<Props> = props => {
   const { list } = props;
 
-  const primaryColor = '#4F6228';
-  const secondaryColor = '#8C9954';
-  const tertiaryColor = '#E8EAC9';
-
   return (
     <>
-      <Typography variant="h4" align="center" color={primaryColor}>
-        Featured Recipes
-      </Typography>
+      <FeatureRecipeTitle>Featured Recipes</FeatureRecipeTitle>
       <FeatureRecipeContainer>
         {list.map(item => (
           <FeatureRecipeContainer key={item.id}>
