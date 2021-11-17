@@ -11,6 +11,8 @@ module.exports = merge(
       alias: {
         core: helpers.resolveFromRootPath('src/core'),
         scenes: helpers.resolveFromRootPath('src/scenes'),
+        pods: helpers.resolveFromRootPath('src/pods'),
+        layouts: helpers.resolveFromRootPath('src/layouts'),
       },
     },
     entry: {
