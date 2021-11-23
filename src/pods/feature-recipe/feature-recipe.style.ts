@@ -10,15 +10,16 @@ export const FeatureRecipeContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 0.625rem;
 `;
 export const RecipeCardContainer = styled.div`
-  margin: 10px;
-  width: 288px;
+  margin: 0.625rem;
+  width: 18rem;
 `;
 export const RecipeCardImage = styled.img`
-  width: 288px;
-  height: 200px;
-  border-radius: 10px 10px 0 0;
+  width: 18rem;
+  height: 12.5rem;
+  border-radius: 0.625rem 0.625rem 0 0;
   background-size: cover;
   background-position: center center;
 `;
@@ -27,23 +28,23 @@ export const RecipeCardInfo = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 200px;
-  margin: 2px 10px;
+  height: 12.5rem;
+  margin: 0.125rem 0.625rem;
 `;
 
 export const RecipeCardRating = styled.div`
   display: flex;
-  margin: 2px;
+  margin: 0.125rem;
   justify-content: space-between;
   color: #8c9954;
 `;
 
 export const RecipeCardMinute = styled.span`
-  margin-left: 5px;
+  margin-left: 0.313rem;
 `;
 
 export const RecipeCardTitle = styled.h2`
-  height: 90px;
+  height: 5.625rem;
 `;
 
 export const RecipeCardDishType = styled.h3`

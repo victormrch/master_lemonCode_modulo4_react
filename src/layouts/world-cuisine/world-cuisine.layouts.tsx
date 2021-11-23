@@ -9,11 +9,6 @@ import {
   WorldCuisineFlagImage,
 } from './world-cuisine.style';
 
-interface Country {
-  name: string;
-  image: string;
-}
-
 export const WorldCuisineLayout: React.FC = () => {
   const countries = [
     { name: 'American', image: 'us.png' },
