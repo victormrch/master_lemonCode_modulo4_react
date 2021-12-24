@@ -16,6 +16,7 @@ export const principalFont = '"Gochi Hand", sans-serif';
 export const primaryColor = '#4F6228';
 export const secondaryColor = '#8C9954';
 export const tertiaryColor = '#E8EAC9';
+export const whiteColor = '#FFFFFF';
 
 //Button Text Color
 export const signUpColor = '#FFFFFF';

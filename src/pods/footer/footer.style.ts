@@ -5,13 +5,13 @@ import {
   tertiaryColor,
   signUpColor,
   principalFont,
-} from '../../common-app/theme/app.style';
+} from '../../core/theme/app.style';
 
 export const FooterContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  bottom: 0;
+  margin-top: auto;
   height: 26.25rem;
   width: 100%;
   background-image: url(../src/assets/img/footer_tree.png);

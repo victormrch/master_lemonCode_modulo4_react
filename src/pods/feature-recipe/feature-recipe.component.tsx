@@ -14,7 +14,9 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faStar } from '@fortawesome/free-solid-svg-icons';
 import StarRatingComponent from 'react-star-rating-component';
-import { primaryColor, tertiaryColor } from '../../common-app/theme/app.style';
+import { primaryColor, tertiaryColor } from '../../core/theme/app.style';
+import { useHistory } from 'react-router';
+import { routes } from 'core/router/routes';
 
 interface Props {
   list: FeatureRecipe[];
@@ -26,6 +28,11 @@ function formatRating(rating) {
 
 export const FeatureRecipeList: React.FC<Props> = props => {
   const { list } = props;
+  const history = useHistory();
+
+  const HandleClick = (id: string) => () => {
+    history.push(routes.recipe(id));
+  };
 
   return (
     <>
@@ -34,7 +41,10 @@ export const FeatureRecipeList: React.FC<Props> = props => {
         {list.map(item => (
           <FeatureRecipeContainer key={item.id}>
             <RecipeCardContainer>
-              <RecipeCardImage src={item.image}></RecipeCardImage>
+              <RecipeCardImage
+                src={item.image}
+                onClick={HandleClick(item.id.toString())}
+              ></RecipeCardImage>
               <RecipeCardInfo>
                 <RecipeCardDishType>{item.dishTypes[0]}</RecipeCardDishType>
                 <RecipeCardTitle>{item.title}</RecipeCardTitle>

@@ -1,15 +1,16 @@
-import { routes } from 'core/router/routes';
-import { FooterLayout } from 'layouts/footer/footer.layouts';
-import { WorldCuisineLayout } from 'layouts/world-cuisine/world-cuisine.layouts';
+import { FooterLayout } from 'pods/footer/footer.component';
+import { WorldCuisineLayout } from 'pods/world-cuisine/world-cuisine.layouts';
+import { MealsCategoryLayout } from 'pods/meals-category/meals-category.component';
 import { FeatureRecipeContainer } from 'pods/feature-recipe';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavbarLayout } from 'pods/navbar/navbar.component';
 
 export const HomeScene: React.FC = () => {
   return (
     <>
+      <NavbarLayout />
       <FeatureRecipeContainer />
-      <Link to={routes.recipe('123')}>Navigate to recipe</Link>
+      <MealsCategoryLayout />
       <WorldCuisineLayout />
       <FooterLayout />
     </>

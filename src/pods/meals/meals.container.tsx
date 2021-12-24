@@ -16,6 +16,7 @@ export const MealsContainer: React.FC<Props> = props => {
     getMealsByCategory(category)
       .then(mapMealsListToVM)
       .then(setMeals);
-  }, []);
+  }, [category]);
+
   return <>{meals && <MealsList list={meals} />}</>;
 };

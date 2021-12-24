@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { primaryColor, secondaryColor } from '../../common-app/theme/app.style';
+import { primaryColor, secondaryColor } from '../../core/theme/app.style';
 
 export const FeatureRecipeTitle = styled.h1`
   display: flex;
@@ -10,11 +10,21 @@ export const FeatureRecipeContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 0.625rem;
+  margin-bottom: 0.938rem;
 `;
 export const RecipeCardContainer = styled.div`
   margin: 0.625rem;
   width: 18rem;
+  border-radius: 0.625rem 0.625rem 0 0;
+  box-shadow: rgb(50 50 93 / 25%) 0px 6px 12px -2px,
+    rgb(0 0 0 / 30%) 0px 3px 7px -3px;
+  transition: transform 0.3s;
+
+  :hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    color: ${secondaryColor};
+  }
 `;
 export const RecipeCardImage = styled.img`
   width: 18rem;
