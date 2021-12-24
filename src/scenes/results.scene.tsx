@@ -1,14 +1,22 @@
-import { routes } from 'core/router/routes';
+import { AppHeader } from 'common-app/components/app-header.component';
+import { SearchInputLayout } from 'layouts/search-input/search-input.layout';
+import { FooterLayout } from 'pods/footer/footer.component';
+import { SearchInputComponent } from 'pods/search-input/search-input.component';
+import { SearchListContainer } from 'pods/search-list';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { AppHeader } from '../common-app/components/app-header.component';
+import { useParams } from 'react-router-dom';
 
 export const ResultsScene: React.FC = () => {
+  const { id } = useParams<{ id: string }>();
+
   return (
     <>
       <AppHeader />
-      <h1>Hello from Results Scene</h1>
-      <Link to={routes.home}>Back to Home</Link>
+      <SearchInputLayout>
+        <SearchInputComponent />
+      </SearchInputLayout>
+      <SearchListContainer search={id} />
+      <FooterLayout />
     </>
   );
 };

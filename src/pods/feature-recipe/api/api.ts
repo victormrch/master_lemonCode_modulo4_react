@@ -1,8 +1,9 @@
+import { apiKeySecondary } from 'common/api';
 import { FeatureRecipeResponse } from './api.model';
 
 export const getFeatureRecipe = async (): Promise<FeatureRecipeResponse> => {
   return fetch(
-    'https://api.spoonacular.com/recipes/random?number=4&apiKey=412ff64c96be40b58b19054492416c74'
+    `https://api.spoonacular.com/recipes/random?number=4&apiKey=${apiKeySecondary}`
   ).then(r => r.json());
 };
 

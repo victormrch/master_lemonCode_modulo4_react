@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { primaryColor, secondaryColor } from '../../common-app/theme/app.style';
+import { primaryColor, secondaryColor } from '../../core/theme/app.style';
 
 export const WorldCuisineContainer = styled.div`
   display: flex;
@@ -27,6 +27,17 @@ export const WorldCuisineCountryContainer = styled.div`
   display: flex;
   align-items: center;
   margin: 1.25rem;
+  transition: transform 0.3s;
+
+  :hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    color: ${secondaryColor};
+  }
+
+  :active {
+    transform: translateY(4px);
+  }
 `;
 
 export const WorldCuisineFlagName = styled.h4`

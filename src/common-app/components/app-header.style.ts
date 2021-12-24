@@ -1,8 +1,4 @@
-import {
-  primaryColor,
-  secondaryColor,
-  whiteColor,
-} from '../../common-app/theme/app.style';
+import { primaryColor, secondaryColor, whiteColor } from 'core/theme/app.style';
 import styled from 'styled-components';
 
 export const AppHeaderContainer = styled.div`

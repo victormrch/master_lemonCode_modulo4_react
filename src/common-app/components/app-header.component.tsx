@@ -21,7 +21,7 @@ export const AppHeader: React.FC = () => {
     history.push(routes.home);
   };
   const HandleClickSearch = () => {
-    history.push(routes.results);
+    history.push(routes.results(''));
   };
   return (
     <>

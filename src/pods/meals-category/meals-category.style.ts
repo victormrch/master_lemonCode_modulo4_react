@@ -1,8 +1,5 @@
 import styled from 'styled-components';
-import {
-  tertiaryColor,
-  secondaryColor,
-} from '../../common-app/theme/app.style';
+import { tertiaryColor, secondaryColor } from '../../core/theme/app.style';
 
 export const MealsCategoryContainer = styled.div`
   display: flex;

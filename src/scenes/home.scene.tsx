@@ -1,9 +1,9 @@
-import { FooterLayout } from 'layouts/footer/footer.layouts';
-import { WorldCuisineLayout } from 'layouts/world-cuisine/world-cuisine.layouts';
-import { MealsCategoryLayout } from 'layouts/meals-category/meals-category.layouts';
+import { FooterLayout } from 'pods/footer/footer.component';
+import { WorldCuisineLayout } from 'pods/world-cuisine/world-cuisine.layouts';
+import { MealsCategoryLayout } from 'pods/meals-category/meals-category.component';
 import { FeatureRecipeContainer } from 'pods/feature-recipe';
 import React from 'react';
-import { NavbarLayout } from 'layouts/navbar/navbar.layouts';
+import { NavbarLayout } from 'pods/navbar/navbar.component';
 
 export const HomeScene: React.FC = () => {
   return (

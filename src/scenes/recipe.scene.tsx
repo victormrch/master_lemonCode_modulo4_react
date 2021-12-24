@@ -1,14 +1,17 @@
-import { routes } from 'core/router/routes';
+import { FooterLayout } from 'pods/footer/footer.component';
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { AppHeader } from '../common-app/components/app-header.component';
+import { useParams } from 'react-router-dom';
+import { DetailRecipeContainer } from 'pods/detail-recipe';
 
 export const RecipeScene: React.FC = () => {
+  const { id } = useParams<{ id: string }>();
+
   return (
     <>
       <AppHeader />
-      <h1>Hello from Recipe Scene</h1>;
-      <Link to={routes.category('brunch')}>Navigate to category</Link>
+      <DetailRecipeContainer id={id} />
+      <FooterLayout />
     </>
   );
 };
