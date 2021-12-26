@@ -16,13 +16,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faUtensils } from '@fortawesome/free-solid-svg-icons';
 import { Pagination } from '@mui/material';
 import usePagination from 'common-app/utils/pagination';
+import { getImage } from 'common-app/utils/getRecipeImage';
 
 interface Props {
   list: RelatedRecipe[];
-}
-
-function getImage(id: number) {
-  return `https://spoonacular.com/recipeImages/${id}-556x370.jpg`;
 }
 
 export const RelatedRecipeList: React.FC<Props> = props => {

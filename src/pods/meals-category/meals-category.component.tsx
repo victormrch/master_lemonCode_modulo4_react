@@ -1,6 +1,7 @@
 import { routes } from 'core/router/routes';
 import React from 'react';
 import { useHistory } from 'react-router';
+import { mealsCategory } from './meals-category.constants';
 import {
   MealsCategoryContainer,
   MealsCategoryTitle,
@@ -9,14 +10,6 @@ import {
 } from './meals-category.style';
 
 export const MealsCategoryLayout: React.FC = () => {
-  const mealsCategory = [
-    { name: 'breakfast', image: 'breakfast_category.png' },
-    { name: 'lunch', image: 'lunch_category.png' },
-    { name: 'dinner', image: 'dinner_category.png' },
-    { name: 'dessert', image: 'dessert_category.png' },
-    { name: 'drinks', image: 'drinks_category.png' },
-  ];
-
   const history = useHistory();
   const HandleClick = (category: string) => () => {
     history.push(routes.category(category));

@@ -17,13 +17,10 @@ import StarRatingComponent from 'react-star-rating-component';
 import { primaryColor, tertiaryColor } from '../../core/theme/app.style';
 import { useHistory } from 'react-router';
 import { routes } from 'core/router/routes';
+import { formatRating } from 'common-app/utils/formatter';
 
 interface Props {
   list: FeatureRecipe[];
-}
-
-function formatRating(rating) {
-  return rating / 25;
 }
 
 export const FeatureRecipeList: React.FC<Props> = props => {

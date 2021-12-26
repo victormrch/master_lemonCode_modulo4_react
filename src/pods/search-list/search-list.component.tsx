@@ -11,12 +11,10 @@ import { SearchInfo } from './search-list.vm';
 import { useParams } from 'react-router-dom';
 import { useHistory } from 'react-router';
 import { routes } from 'core/router/routes';
+import { capitalizeFirstLetter } from 'common-app/utils/capitalizeWord';
 
 interface Props {
   list: SearchInfo[];
-}
-function capitalizeFirstLetter(word: string) {
-  return word.charAt(0).toUpperCase() + word.slice(1);
 }
 
 export const SearchList: React.FC<Props> = props => {
