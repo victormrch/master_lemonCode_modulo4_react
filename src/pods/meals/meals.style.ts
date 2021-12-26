@@ -55,3 +55,9 @@ export const MealsCardImage = styled.img`
 export const MealsCardTitle = styled.h3`
   margin: 25px;
 `;
+
+export const MealsPaginationContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.875rem;
+`;

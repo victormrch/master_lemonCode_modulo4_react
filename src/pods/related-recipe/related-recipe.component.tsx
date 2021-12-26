@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   RelatedRecipeCardContainer,
   RelatedRecipeCardImage,
@@ -7,13 +7,15 @@ import {
   RelatedRecipeCardTitle,
   RelatedRecipeContainer,
   RelatedRecipeCardMinute,
+  RelatedRecipePaginationContainer,
 } from './related-recipe.style';
 import { RelatedRecipe } from './related-recipe.vm';
 import { useHistory } from 'react-router';
 import { routes } from 'core/router/routes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faUtensils } from '@fortawesome/free-solid-svg-icons';
-import { ListItem, Pagination } from '@mui/material';
+import { Pagination } from '@mui/material';
+import usePagination from 'common-app/utils/pagination';
 
 interface Props {
   list: RelatedRecipe[];
@@ -28,20 +30,24 @@ export const RelatedRecipeList: React.FC<Props> = props => {
 
   const history = useHistory();
 
-  const count = Math.ceil(list.length / 3);
-
   const HandleClick = (id: string) => () => {
     history.push(routes.recipe(id));
   };
 
-  const [page, setPage] = React.useState(1);
-  const handleChange = (event, value) => {
-    setPage(value);
+  const [page, setPage] = useState(1);
+  const PER_PAGE = 3;
+  const count = Math.ceil(list.length / PER_PAGE);
+  const _DATA = usePagination(list, PER_PAGE);
+
+  const handleChange = (e, p) => {
+    setPage(p);
+    _DATA.jump(p);
   };
+
   return (
     <>
       <RelatedRecipeContainer>
-        {list.map(item => (
+        {_DATA.currentData().map(item => (
           <RelatedRecipeCardContainer key={item.id}>
             <RelatedRecipeCardImage
               src={getImage(item.id)}
@@ -66,8 +72,20 @@ export const RelatedRecipeList: React.FC<Props> = props => {
             </RelatedRecipeCardInfo>
           </RelatedRecipeCardContainer>
         ))}
-        <Pagination count={count} page={page} onChange={handleChange} />
       </RelatedRecipeContainer>
+      <RelatedRecipePaginationContainer>
+        <Pagination
+          count={count}
+          size="large"
+          page={page}
+          variant="outlined"
+          shape="rounded"
+          color="standard"
+          showFirstButton
+          showLastButton
+          onChange={handleChange}
+        />
+      </RelatedRecipePaginationContainer>
     </>
   );
 };

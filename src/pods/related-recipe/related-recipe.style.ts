@@ -61,3 +61,8 @@ export const RelatedRecipeCardTitle = styled.h2`
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 `;
+
+export const RelatedRecipePaginationContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;

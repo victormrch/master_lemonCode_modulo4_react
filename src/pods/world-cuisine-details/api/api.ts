@@ -5,6 +5,6 @@ export const getWorldCuisineDetailsByCountry = async (
   country: string
 ): Promise<WorldCuisineDetailsResponse> => {
   return fetch(
-    `https://api.spoonacular.com/recipes/complexSearch?&number=100&cuisine=${country}&apiKey=${apiKeyPrincipal}`
+    `https://api.spoonacular.com/recipes/complexSearch?&number=100&cuisine=${country}&apiKey=${apiKeySecondary}`
   ).then(r => r.json());
 };

@@ -5,6 +5,6 @@ export const getDetailRecipe = async (
   id: string
 ): Promise<DetailRecipeResponse> => {
   return fetch(
-    `https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false&apiKey=${apiKeyPrincipal}`
+    `https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false&apiKey=${apiKeySecondary}`
   ).then(r => r.json());
 };

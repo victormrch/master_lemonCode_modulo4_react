@@ -1,4 +1,8 @@
-import { primaryColor, secondaryColor } from 'core/theme/app.style';
+import {
+  primaryColor,
+  secondaryColor,
+  tertiaryColor,
+} from 'core/theme/app.style';
 import styled from 'styled-components';
 
 export const WorldCuisineDetailsContainer = styled.div`
@@ -54,4 +58,14 @@ export const WorldCuisineDetailsCardImage = styled.img`
 `;
 export const WorldCuisineDetailsCardTitle = styled.h3`
   margin: 25px;
+`;
+
+export const WorldCuisineDetailsPaginationContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.875rem;
+`;
+
+export const WorldCuisineDetailsLayoutContainer = styled.div`
+  background-color: ${tertiaryColor};
 `;
