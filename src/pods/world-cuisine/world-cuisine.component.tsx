@@ -8,6 +8,8 @@ import {
   WorldCuisineFlagName,
   WorldCuisineFlagImage,
 } from './world-cuisine.style';
+import { useHistory } from 'react-router';
+import { routes } from 'core/router/routes';
 
 export const WorldCuisineLayout: React.FC = () => {
   const countries = [
@@ -25,13 +27,21 @@ export const WorldCuisineLayout: React.FC = () => {
     { name: 'Thai', image: 'th.png' },
   ];
 
+  const history = useHistory();
+  const HandleClick = (country: string) => () => {
+    history.push(routes.category(country));
+  };
+
   return (
     <>
       <WorldCuisineContainer>
         <WorldCuisineTitle>World Cuisine Recipes</WorldCuisineTitle>
         <WorldCuisineCountries>
           {countries.map((item, index) => (
-            <WorldCuisineCountryContainer key={index}>
+            <WorldCuisineCountryContainer
+              key={index}
+              onClick={HandleClick(item.name)}
+            >
               <WorldCuisineFlagName>{item.name}</WorldCuisineFlagName>
               <WorldCuisineFlagImage
                 background={`../src/assets/img/flags/${item.image}`}

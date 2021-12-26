@@ -1,7 +1,7 @@
 import { primaryColor, secondaryColor } from 'core/theme/app.style';
 import styled from 'styled-components';
 
-export const MealsContainer = styled.div`
+export const WorldCuisineDetailsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -9,22 +9,22 @@ export const MealsContainer = styled.div`
   margin: 30px;
 `;
 
-export const MealsIntroduction = styled.div`
+export const WorldCuisineDetailsIntroduction = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
-export const MealsTitle = styled.h1`
+export const WorldCuisineDetailsTitle = styled.h1`
   color: ${primaryColor};
   font-size: 40px;
   margin-bottom: 0;
 `;
-export const MealsSubtitle = styled.p`
+export const WorldCuisineDetailsSubtitle = styled.p`
   width: 75%;
   font-size: 20px;
 `;
 
-export const MealsCard = styled.div`
+export const WorldCuisineDetailsCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,13 +45,13 @@ export const MealsCard = styled.div`
     transform: translateY(4px);
   }
 `;
-export const MealsCardImage = styled.img`
+export const WorldCuisineDetailsCardImage = styled.img`
   width: 100%;
   height: 184px;
   background-size: cover;
   background-position: center center;
   border-radius: 1.625rem 1.625rem 0 0;
 `;
-export const MealsCardTitle = styled.h3`
+export const WorldCuisineDetailsCardTitle = styled.h3`
   margin: 25px;
 `;

@@ -15,6 +15,7 @@ import {
   DetailRecipeInstructionsContent,
   DetailRecipeInstructionsLine,
   DetailRecipeLine,
+  DetailRecipeRelatedContainer,
   DetailRecipeSummaryContainer,
   DetailRecipeTitle,
 } from './detail-recipe.style';
@@ -27,6 +28,7 @@ import {
   faStar,
 } from '@fortawesome/free-solid-svg-icons';
 import { primaryColor, tertiaryColor } from 'core/theme/app.style';
+import { RelatedRecipeContainer } from 'pods/related-recipe';
 
 interface Props {
   recipe: DetailRecipeInfo;
@@ -116,6 +118,11 @@ export const DetailRecipeList: React.FC<Props> = props => {
               </div>
             </DetailRecipeInstructionsContent>
           </DetailRecipeInstructionsContainer>
+          <DetailRecipeRelatedContainer>
+            <DetailRecipeTitle>Related Recipe</DetailRecipeTitle>
+            <DetailRecipeInstructionsLine />
+            <RelatedRecipeContainer id={recipe.id} />
+          </DetailRecipeRelatedContainer>
         </DetailRecipeContainer>
       )}
     </>
