@@ -50,7 +50,6 @@ function formatUnit(unit: number) {
 
 export const DetailRecipeList: React.FC<Props> = props => {
   const { recipe } = props;
-  console.log(recipe);
 
   return (
     <>

@@ -11,7 +11,6 @@ export const CategoryScene: React.FC = () => {
 
   const isCountry = countries.includes(id);
 
-  console.log(isCountry);
   return (
     <>
       <AppHeader />

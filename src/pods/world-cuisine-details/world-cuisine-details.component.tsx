@@ -23,8 +23,6 @@ export const WorldCuisineDetailsList: React.FC<Props> = props => {
   const { list } = props;
   const { id } = useParams<{ id: keyof typeof COUNTRIES }>();
 
-  console.log(id);
-
   const history = useHistory();
   const HandleClick = (id: string) => () => {
     history.push(routes.recipe(id));
