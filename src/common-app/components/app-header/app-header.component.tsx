@@ -8,21 +8,45 @@ import {
   AppHeaderImage,
   AppHeaderLeft,
   AppHeaderMainTitle,
+  AppHeaderModalContainer,
+  AppHeaderModalInput,
+  AppHeaderModalTitle,
   AppHeaderRight,
   AppHeaderSecondaryTitle,
   AppHeaderText,
 } from './app-header.style';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faSearch } from '@fortawesome/free-solid-svg-icons';
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
+import { SearchInputComponent } from 'pods/search-input/search-input.component';
+import { SearchInputLayout } from 'layouts/search-input/search-input.layout';
+
+const style = {
+  position: 'absolute' as 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 500,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
 
 export const AppHeader: React.FC = () => {
   const history = useHistory();
   const HandleClickHome = () => {
     history.push(routes.home);
   };
+
+  const [open, setOpen] = React.useState(false);
+  const handleClose = () => setOpen(false);
+
   const HandleClickSearch = () => {
-    history.push(routes.results(''));
+    setOpen(true);
   };
+
   return (
     <>
       <AppHeaderContainer>
@@ -53,6 +77,23 @@ export const AppHeader: React.FC = () => {
           </AppHeaderIconMedia>
         </AppHeaderRight>
       </AppHeaderContainer>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <AppHeaderModalContainer>
+            <AppHeaderModalTitle>
+              What do you want to eat today?
+            </AppHeaderModalTitle>
+            <SearchInputLayout>
+              <SearchInputComponent />
+            </SearchInputLayout>
+          </AppHeaderModalContainer>
+        </Box>
+      </Modal>
     </>
   );
 };

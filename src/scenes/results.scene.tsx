@@ -1,4 +1,4 @@
-import { AppHeader } from 'common-app/components/app-header.component';
+import { AppHeader } from 'common-app/components/app-header/app-header.component';
 import { SearchInputLayout } from 'layouts/search-input/search-input.layout';
 import { FooterLayout } from 'pods/footer/footer.component';
 import { SearchInputComponent } from 'pods/search-input/search-input.component';

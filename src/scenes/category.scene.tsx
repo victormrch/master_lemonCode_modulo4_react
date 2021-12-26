@@ -1,4 +1,4 @@
-import { AppHeader } from 'common-app/components/app-header.component';
+import { AppHeader } from 'common-app/components/app-header/app-header.component';
 import { countries } from 'common/constants/countries';
 import { FooterLayout } from 'pods/footer/footer.component';
 import { MealsContainer } from 'pods/meals';
