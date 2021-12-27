@@ -6,17 +6,17 @@ export const SearchContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   color: ${secondaryColor};
-  margin: 30px;
+  margin: 1.875rem;
 `;
 export const SearchIntroduction = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
+  margin: 1.25rem;
 `;
 export const SearchTitle = styled.h1`
   color: ${primaryColor};
-  font-size: 40px;
+  font-size: 2.5rem;
   margin-bottom: 0;
 `;
 export const SearchCard = styled.div`
@@ -24,9 +24,9 @@ export const SearchCard = styled.div`
   flex-direction: column;
   align-items: center;
   border-radius: 1.625rem;
-  width: 249px;
-  height: 286px;
-  margin: 20px;
+  width: 15.563rem;
+  height: 17.875rem;
+  margin: 1.25rem;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   transition: transform 0.3s;
@@ -42,13 +42,13 @@ export const SearchCard = styled.div`
 `;
 export const SearchCardImage = styled.img`
   width: 100%;
-  height: 184px;
+  height: 11.5rem;
   background-size: cover;
   background-position: center center;
   border-radius: 1.625rem 1.625rem 0 0;
 `;
 export const SearchCardTitle = styled.h3`
-  margin: 25px;
+  margin: 1.563rem;
 `;
 
 export const SearchPaginationContainer = styled.div`

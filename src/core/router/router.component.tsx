@@ -2,7 +2,7 @@ import React from 'react';
 import { HashRouter, Switch, Route } from 'react-router-dom';
 import { switchRoutes } from './routes';
 import { CategoryScene, HomeScene, RecipeScene, ResultsScene } from 'scenes';
-import ScrollToTop from 'common-app/scroll-top/scroll-top.component';
+import ScrollToTop from 'common-app/components/scroll-top/scroll-top.component';
 
 export const AppRouter: React.FC = () => {
   return (

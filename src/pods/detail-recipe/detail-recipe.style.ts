@@ -39,14 +39,14 @@ export const DetailRecipeInfoIconsCard = styled.div`
 `;
 export const DetailRecipeInfoIcons = styled.span`
   margin-left: 0.625rem;
-  font-size: 20px;
+  font-size: 1.25rem;
 `;
 
 export const DetailRecipeSummaryContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  margin: 20px 0 -5px;
+  margin: 1.25rem 0 -0.313rem;
 `;
 export const DetailRecipeTitle = styled.h2`
   color: ${primaryColor};
@@ -77,7 +77,7 @@ export const DetailRecipeIngredients = styled.li`
     content: '·';
     font-size: 6.25rem;
     vertical-align: middle;
-    line-height: 20px;
+    line-height: 1.25rem;
     color: ${primaryColor};
   }
 `;

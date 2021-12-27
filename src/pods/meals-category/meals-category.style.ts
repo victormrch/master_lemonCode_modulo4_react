@@ -36,6 +36,6 @@ export const MealsCategoryImage = styled.img`
     color: ${secondaryColor};
   }
   :active {
-    transform: translateY(4px);
+    transform: translateY(0.25rem);
   }
 `;

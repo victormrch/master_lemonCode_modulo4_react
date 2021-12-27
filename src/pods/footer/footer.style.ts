@@ -53,7 +53,7 @@ export const FooterInput = styled.input`
   }
   :focus {
     outline: none !important;
-    border: 1px solid ${primaryColor};
+    border: 0.063rem solid ${primaryColor};
     box-shadow: 0 0 10px ${secondaryColor};
   }
 `;
@@ -61,7 +61,7 @@ export const FooterInput = styled.input`
 export const FooterButton = styled.button`
   width: 12.5rem;
   border-radius: 0.625rem;
-  border: 1px solid ${primaryColor};
+  border: 0.063rem solid ${primaryColor};
   background: ${primaryColor};
   color: ${signUpColor};
   font-family: ${principalFont};
@@ -83,17 +83,17 @@ export const FooterButton = styled.button`
 
   :hover {
     background: ${secondaryColor};
-    border: 1px solid ${secondaryColor};
-    padding-right: 24px;
-    padding-left: 8px;
+    border: 0.063rem solid ${secondaryColor};
+    padding-right: 1.5rem;
+    padding-left: 0.5rem;
   }
 
   :hover:after {
     opacity: 1;
-    right: 10px;
+    right: 0.625rem;
   }
   :active {
-    transform: translateY(4px);
+    transform: translateY(0.25rem);
   }
 `;
 
@@ -113,6 +113,6 @@ export const FooterSocialMedia = styled.div`
     color: ${secondaryColor};
   }
   :active {
-    transform: translateY(4px);
+    transform: translateY(0.25rem);
   }
 `;
