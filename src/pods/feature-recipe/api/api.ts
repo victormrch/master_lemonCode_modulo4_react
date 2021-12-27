@@ -1,4 +1,4 @@
-import { apiKeySecondary } from 'common/api';
+import { apiKeyPrincipal, apiKeySecondary } from 'common/api';
 import { FeatureRecipeResponse } from './api.model';
 
 export const getFeatureRecipe = async (): Promise<FeatureRecipeResponse> => {

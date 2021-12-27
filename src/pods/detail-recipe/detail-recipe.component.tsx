@@ -15,6 +15,7 @@ import {
   DetailRecipeInstructionsContent,
   DetailRecipeInstructionsLine,
   DetailRecipeLine,
+  DetailRecipeRelatedContainer,
   DetailRecipeSummaryContainer,
   DetailRecipeTitle,
 } from './detail-recipe.style';
@@ -27,28 +28,16 @@ import {
   faStar,
 } from '@fortawesome/free-solid-svg-icons';
 import { primaryColor, tertiaryColor } from 'core/theme/app.style';
+import { RelatedRecipeContainer } from 'pods/related-recipe';
+import { formatRating, formatUnit } from 'common-app/utils/formatter';
+import { getCostPerServing } from 'common-app/utils/getCost';
 
 interface Props {
   recipe: DetailRecipeInfo;
 }
 
-function getCostPerServing(cost) {
-  return (cost / 100).toFixed(2);
-}
-
-function formatRating(rating) {
-  return rating / 25;
-}
-
-function formatUnit(unit: number) {
-  const isInteger = Number.isInteger(unit);
-  if (isInteger) return unit;
-  return unit.toFixed(2);
-}
-
 export const DetailRecipeList: React.FC<Props> = props => {
   const { recipe } = props;
-  console.log(recipe);
 
   return (
     <>
@@ -116,6 +105,11 @@ export const DetailRecipeList: React.FC<Props> = props => {
               </div>
             </DetailRecipeInstructionsContent>
           </DetailRecipeInstructionsContainer>
+          <DetailRecipeRelatedContainer>
+            <DetailRecipeTitle>Related Recipe</DetailRecipeTitle>
+            <DetailRecipeInstructionsLine />
+            <RelatedRecipeContainer id={recipe.id} />
+          </DetailRecipeRelatedContainer>
         </DetailRecipeContainer>
       )}
     </>

@@ -1,6 +1,6 @@
 import { FooterLayout } from 'pods/footer/footer.component';
 import React from 'react';
-import { AppHeader } from '../common-app/components/app-header.component';
+import { AppHeader } from '../common-app/components/app-header/app-header.component';
 import { useParams } from 'react-router-dom';
 import { DetailRecipeContainer } from 'pods/detail-recipe';
 

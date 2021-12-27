@@ -1,4 +1,4 @@
-import { apiKeySecondary } from 'common/api';
+import { apiKeyPrincipal, apiKeySecondary } from 'common/api';
 import { SearchResponse } from './api.model';
 
 export const getRecipesBySearch = async (

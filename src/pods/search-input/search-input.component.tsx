@@ -9,7 +9,6 @@ export const SearchInputComponent: React.FC = () => {
 
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('entra');
     history.push(routes.results(search));
   };
 

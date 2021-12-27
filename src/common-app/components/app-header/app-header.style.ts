@@ -70,3 +70,13 @@ export const AppHeaderIconMedia = styled.div`
     transform: translateY(4px);
   }
 `;
+
+export const AppHeaderModalContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const AppHeaderModalTitle = styled.h2`
+  color: ${primaryColor};
+`;

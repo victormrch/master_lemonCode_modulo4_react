@@ -5,9 +5,7 @@ import {
   tertiaryColor,
 } from '../../core/theme/app.style';
 
-export const DetailRecipeContainer = styled.div`
-  // margin: 3.125rem;
-`;
+export const DetailRecipeContainer = styled.div``;
 
 export const DetailRecipeInfoContainer = styled.div`
   display: grid;
@@ -91,5 +89,11 @@ export const DetailRecipeInstructionsContainer = styled.div`
 `;
 
 export const DetailRecipeInstructionsContent = styled.div`
+  margin: 3rem;
+`;
+
+export const DetailRecipeRelatedContainer = styled.div`
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
   margin: 3rem;
 `;
