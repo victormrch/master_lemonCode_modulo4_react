@@ -50,3 +50,9 @@ export const SearchCardImage = styled.img`
 export const SearchCardTitle = styled.h3`
   margin: 25px;
 `;
+
+export const SearchPaginationContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.875rem;
+`;
