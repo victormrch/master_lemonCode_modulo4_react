@@ -1,4 +1,4 @@
-import { primaryColor, secondaryColor } from 'core/theme/app.style';
+import { secondaryColor } from 'core/theme/app.style';
 import styled from 'styled-components';
 
 export const RelatedRecipeContainer = styled.div`
