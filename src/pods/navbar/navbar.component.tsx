@@ -13,14 +13,16 @@ export const NavbarLayout: React.FC = () => {
   return (
     <>
       <NavbarContainer>
-        <NavbarImage />
+        <div>
+          <NavbarImage />
+        </div>
         <NavbarText>
           <NavbarMainTitle>KITCHEN JUNGLE</NavbarMainTitle>
           <NavbarSecondaryTitle>Even a Monkey Can Do It</NavbarSecondaryTitle>
-          <NavbarFormContainer>
-            <SearchInputComponent />
-          </NavbarFormContainer>
         </NavbarText>
+        <NavbarFormContainer>
+          <SearchInputComponent />
+        </NavbarFormContainer>
       </NavbarContainer>
     </>
   );

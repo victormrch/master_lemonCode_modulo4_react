@@ -12,7 +12,7 @@ export const FooterContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: auto;
-  height: 26.25rem;
+  height: auto;
   width: 100%;
   background-image: url(../src/assets/img/footer_tree.png);
   background-size: cover;
@@ -35,6 +35,12 @@ export const FooterFormContainer = styled.div`
   display: flex;
   margin-top: 1.313rem;
   margin-bottom: 3.438rem;
+
+  @media (max-width: 425px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 export const FooterInput = styled.input`
   width: 26.75rem;
@@ -56,11 +62,17 @@ export const FooterInput = styled.input`
     border: 0.063rem solid ${primaryColor};
     box-shadow: 0 0 10px ${secondaryColor};
   }
+
+  @media (max-width: 425px) {
+    width: 18.75rem;
+  }
 `;
 
 export const FooterButton = styled.button`
   width: 12.5rem;
+  height: 3.25rem;
   border-radius: 0.625rem;
+
   border: 0.063rem solid ${primaryColor};
   background: ${primaryColor};
   color: ${signUpColor};
@@ -95,11 +107,16 @@ export const FooterButton = styled.button`
   :active {
     transform: translateY(0.25rem);
   }
+
+  @media (max-width: 425px) {
+    margin-top: 2rem;
+  }
 `;
 
 export const FooterSocialContainer = styled.div`
   display: flex;
   margin-top: 0.625rem;
+  margin-bottom: 1.625rem;
   color: ${primaryColor};
 `;
 export const FooterSocialMedia = styled.div`

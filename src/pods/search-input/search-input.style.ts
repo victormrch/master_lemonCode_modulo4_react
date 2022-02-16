@@ -26,6 +26,16 @@ export const SearchInput = styled.input`
     border: 0.063rem solid ${primaryColor};
     box-shadow: 0 0 0.625rem ${secondaryColor};
   }
+
+  @media (max-width: 425px) {
+    width: 18.75rem;
+  }
+`;
+
+export const SearchForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const SearchButton = styled.button`
