@@ -14,13 +14,16 @@ export const WorldCuisineTitle = styled.h1`
 
 export const WorldCuisineText = styled.h3`
   color: ${secondaryColor};
-  margin-top: 3rem;
-  margin-bottom: 3.875rem;
+  margin: 3rem;
 `;
 
 export const WorldCuisineCountries = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+
+  @media (max-width: 425px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 export const WorldCuisineCountryContainer = styled.div`

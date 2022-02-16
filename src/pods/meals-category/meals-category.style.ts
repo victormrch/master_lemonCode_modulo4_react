@@ -38,4 +38,9 @@ export const MealsCategoryImage = styled.img`
   :active {
     transform: translateY(0.25rem);
   }
+
+  @media (max-width: 425px) {
+    width: 9.5rem;
+    height: 9.5rem;
+  }
 `;

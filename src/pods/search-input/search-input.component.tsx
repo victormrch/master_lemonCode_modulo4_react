@@ -1,5 +1,5 @@
 import React from 'react';
-import { SearchButton, SearchInput } from './search-input.style';
+import { SearchButton, SearchForm, SearchInput } from './search-input.style';
 import { useHistory } from 'react-router';
 import { routes } from 'core/router/routes';
 
@@ -14,14 +14,14 @@ export const SearchInputComponent: React.FC = () => {
 
   return (
     <>
-      <form onSubmit={handleSearch}>
+      <SearchForm onSubmit={handleSearch}>
         <SearchInput
           placeholder="I want to cook today..."
           value={search}
           onChange={e => setSearch(e.target.value)}
         ></SearchInput>
         <SearchButton type="submit">SEARCH</SearchButton>
-      </form>
+      </SearchForm>
     </>
   );
 };
