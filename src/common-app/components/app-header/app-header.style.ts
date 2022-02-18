@@ -69,6 +69,10 @@ export const AppHeaderIconMedia = styled.div`
   :active {
     transform: translateY(4px);
   }
+
+  @media (max-width: 768px) {
+    color: ${secondaryColor};
+  }
 `;
 
 export const AppHeaderModalContainer = styled.div`

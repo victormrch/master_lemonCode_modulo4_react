@@ -11,6 +11,12 @@ export const DetailRecipeInfoContainer = styled.div`
   display: grid;
   grid-template-columns: 0.5fr 0.85fr;
   margin: 3rem;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 `;
 
 export const DetailRecipeInfoImage = styled.img`

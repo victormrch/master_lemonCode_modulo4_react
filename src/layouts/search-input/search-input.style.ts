@@ -6,4 +6,8 @@ export const SearchInputContainer = styled.div`
   align-items: flex-end;
   height: 6rem;
   width: 100%;
+
+  @media (max-width: 425px) {
+    margin-top: 60px;
+  }
 `;

@@ -17,8 +17,14 @@ import {
   faTwitterSquare,
   faYoutubeSquare,
 } from '@fortawesome/free-brands-svg-icons';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 export const FooterLayout: React.FC = () => {
+  const faInstagramSquareProp = faInstagramSquare as IconProp;
+  const faFacebookSquareProp = faFacebookSquare as IconProp;
+  const faTwitterSquareProp = faTwitterSquare as IconProp;
+  const faYoutubeSquareProp = faYoutubeSquare as IconProp;
+
   return (
     <>
       <FooterContainer>
@@ -36,16 +42,16 @@ export const FooterLayout: React.FC = () => {
           </FooterFormContainer>
           <FooterSocialContainer>
             <FooterSocialMedia>
-              <FontAwesomeIcon icon={faInstagramSquare} size="3x" />
+              <FontAwesomeIcon icon={faInstagramSquareProp} size="3x" />
             </FooterSocialMedia>
             <FooterSocialMedia>
-              <FontAwesomeIcon icon={faFacebookSquare} size="3x" />
+              <FontAwesomeIcon icon={faFacebookSquareProp} size="3x" />
             </FooterSocialMedia>
             <FooterSocialMedia>
-              <FontAwesomeIcon icon={faTwitterSquare} size="3x" />
+              <FontAwesomeIcon icon={faTwitterSquareProp} size="3x" />
             </FooterSocialMedia>
             <FooterSocialMedia>
-              <FontAwesomeIcon icon={faYoutubeSquare} size="3x" />
+              <FontAwesomeIcon icon={faYoutubeSquareProp} size="3x" />
             </FooterSocialMedia>
           </FooterSocialContainer>
         </FooterText>

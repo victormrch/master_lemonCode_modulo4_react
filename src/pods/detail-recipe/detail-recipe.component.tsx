@@ -31,6 +31,7 @@ import { primaryColor, tertiaryColor } from 'core/theme/app.style';
 import { RelatedRecipeContainer } from 'pods/related-recipe';
 import { formatRating, formatUnit } from 'common-app/utils/formatter';
 import { getCostPerServing } from 'common-app/utils/getCost';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 interface Props {
   recipe: DetailRecipeInfo;
@@ -38,6 +39,11 @@ interface Props {
 
 export const DetailRecipeList: React.FC<Props> = props => {
   const { recipe } = props;
+
+  const faClockProp = faClock as IconProp;
+  const faUtensilsProp = faUtensils as IconProp;
+  const faDollarSignProp = faDollarSign as IconProp;
+  const faStarProp = faStar as IconProp;
 
   return (
     <>
@@ -51,19 +57,19 @@ export const DetailRecipeList: React.FC<Props> = props => {
               <DetailRecipeInfoTitle>{recipe.title}</DetailRecipeInfoTitle>
               <DetailRecipeInfoIconContainer>
                 <DetailRecipeInfoIconsCard>
-                  <FontAwesomeIcon icon={faClock} size="2x" />
+                  <FontAwesomeIcon icon={faClockProp} size="2x" />
                   <DetailRecipeInfoIcons>
                     {recipe.readyInMinutes} mins
                   </DetailRecipeInfoIcons>
                 </DetailRecipeInfoIconsCard>
                 <DetailRecipeInfoIconsCard>
-                  <FontAwesomeIcon icon={faUtensils} size="2x" />
+                  <FontAwesomeIcon icon={faUtensilsProp} size="2x" />
                   <DetailRecipeInfoIcons>
                     {recipe.servings} servings
                   </DetailRecipeInfoIcons>
                 </DetailRecipeInfoIconsCard>
                 <DetailRecipeInfoIconsCard>
-                  <FontAwesomeIcon icon={faDollarSign} size="2x" />
+                  <FontAwesomeIcon icon={faDollarSignProp} size="2x" />
                   <DetailRecipeInfoIcons>
                     {getCostPerServing(recipe.pricePerServing)} Per Serving
                   </DetailRecipeInfoIcons>
@@ -74,7 +80,7 @@ export const DetailRecipeList: React.FC<Props> = props => {
                 <StarRatingComponent
                   name="star"
                   editing={false}
-                  renderStarIcon={() => <FontAwesomeIcon icon={faStar} />}
+                  renderStarIcon={() => <FontAwesomeIcon icon={faStarProp} />}
                   starCount={5}
                   starColor={primaryColor}
                   emptyStarColor={tertiaryColor}
