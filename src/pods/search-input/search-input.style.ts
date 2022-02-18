@@ -34,14 +34,17 @@ export const SearchInput = styled.input`
 
 export const SearchForm = styled.form`
   display: flex;
-  flex-direction: column;
   align-items: center;
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+  }
 `;
 
 export const SearchButton = styled.button`
   width: 12.5rem;
   height: 3.25rem;
-  margin-top: 2rem;
+
   border-radius: 0.625rem;
   border: 0.063rem solid ${secondaryColor};
   background: ${secondaryColor};
@@ -76,5 +79,9 @@ export const SearchButton = styled.button`
   }
   :active {
     transform: translateY(0.25rem);
+  }
+
+  @media (max-width: 425px) {
+    margin-top: 2rem;
   }
 `;

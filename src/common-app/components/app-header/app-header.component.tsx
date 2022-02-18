@@ -15,6 +15,7 @@ import {
   AppHeaderText,
 } from './app-header.style';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { faHome, faSearch } from '@fortawesome/free-solid-svg-icons';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
@@ -46,6 +47,9 @@ export const AppHeader: React.FC = () => {
     setOpen(true);
   };
 
+  const faHomeProp = faHome as IconProp;
+  const faSearchProp = faSearch as IconProp;
+
   return (
     <>
       <AppHeaderContainer>
@@ -62,14 +66,14 @@ export const AppHeader: React.FC = () => {
         <AppHeaderRight>
           <AppHeaderIconMedia>
             <FontAwesomeIcon
-              icon={faHome}
+              icon={faHomeProp}
               size="2x"
               onClick={HandleClickHome}
             />
           </AppHeaderIconMedia>
           <AppHeaderIconMedia>
             <FontAwesomeIcon
-              icon={faSearch}
+              icon={faSearchProp}
               size="2x"
               onClick={HandleClickSearch}
             />

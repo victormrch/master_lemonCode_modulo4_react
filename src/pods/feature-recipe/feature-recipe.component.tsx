@@ -18,6 +18,7 @@ import { primaryColor, tertiaryColor } from '../../core/theme/app.style';
 import { useHistory } from 'react-router';
 import { routes } from 'core/router/routes';
 import { formatRating } from 'common-app/utils/formatter';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 interface Props {
   list: FeatureRecipe[];
@@ -26,6 +27,9 @@ interface Props {
 export const FeatureRecipeList: React.FC<Props> = props => {
   const { list } = props;
   const history = useHistory();
+
+  const faClockProp = faClock as IconProp;
+  const faStarProp = faStar as IconProp;
 
   const HandleClick = (id: string) => () => {
     history.push(routes.recipe(id));
@@ -47,7 +51,7 @@ export const FeatureRecipeList: React.FC<Props> = props => {
                 <RecipeCardTitle>{item.title}</RecipeCardTitle>
                 <RecipeCardRating>
                   <div>
-                    <FontAwesomeIcon icon={faClock} />
+                    <FontAwesomeIcon icon={faClockProp} />
                     <RecipeCardMinute>
                       {item.readyInMinutes} mins
                     </RecipeCardMinute>
@@ -55,7 +59,7 @@ export const FeatureRecipeList: React.FC<Props> = props => {
                   <StarRatingComponent
                     name="star"
                     editing={false}
-                    renderStarIcon={() => <FontAwesomeIcon icon={faStar} />}
+                    renderStarIcon={() => <FontAwesomeIcon icon={faStarProp} />}
                     starCount={5}
                     starColor={primaryColor}
                     emptyStarColor={tertiaryColor}

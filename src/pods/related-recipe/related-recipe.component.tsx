@@ -17,6 +17,7 @@ import { faClock, faUtensils } from '@fortawesome/free-solid-svg-icons';
 import { Pagination } from '@mui/material';
 import usePagination from 'common-app/utils/pagination';
 import { getImage } from 'common-app/utils/getRecipeImage';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 interface Props {
   list: RelatedRecipe[];
@@ -41,6 +42,9 @@ export const RelatedRecipeList: React.FC<Props> = props => {
     _DATA.jump(p);
   };
 
+  const faClockProp = faClock as IconProp;
+  const faUtensilsProp = faUtensils as IconProp;
+
   return (
     <>
       <RelatedRecipeContainer>
@@ -54,13 +58,13 @@ export const RelatedRecipeList: React.FC<Props> = props => {
               <RelatedRecipeCardTitle>{item.title}</RelatedRecipeCardTitle>
               <RelatedRecipeCardRating>
                 <div>
-                  <FontAwesomeIcon icon={faClock} />
+                  <FontAwesomeIcon icon={faClockProp} />
                   <RelatedRecipeCardMinute>
                     {item.readyInMinutes} mins
                   </RelatedRecipeCardMinute>
                 </div>
                 <div>
-                  <FontAwesomeIcon icon={faUtensils} />
+                  <FontAwesomeIcon icon={faUtensilsProp} />
                   <RelatedRecipeCardMinute>
                     {item.servings} servings
                   </RelatedRecipeCardMinute>
