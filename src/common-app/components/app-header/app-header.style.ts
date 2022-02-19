@@ -1,5 +1,7 @@
 import { primaryColor, secondaryColor, whiteColor } from 'core/theme/app.style';
 import styled from 'styled-components';
+import appHeader from '../../../assets/img/app_header.png';
+import monoHome from '../../../assets/img/mono_home.png';
 
 export const AppHeaderContainer = styled.div`
   display: flex;
@@ -7,7 +9,7 @@ export const AppHeaderContainer = styled.div`
   justify-content: center;
   height: 6rem;
   width: 100%;
-  background-image: url(../src/assets/img/app_header.png);
+  background-image: url(${appHeader});
   background-size: cover;
   background-position: center center;
 `;
@@ -27,7 +29,7 @@ export const AppHeaderRight = styled.div`
   width: 15%;
 `;
 export const AppHeaderImage = styled.div`
-  background-image: url(../src/assets/img/mono_home.png);
+  background-image: url(${monoHome});
   width: 4.5rem;
   height: 4.5rem;
   background-size: cover;

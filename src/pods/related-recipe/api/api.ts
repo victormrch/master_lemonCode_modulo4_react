@@ -5,6 +5,6 @@ export const getDetailRecipe = async (
   id: number
 ): Promise<RelatedRecipeResponse> => {
   return fetch(
-    `https://api.spoonacular.com/recipes/${id}/similar?apiKey=${apiKeySecondary}`
+    `https://api.spoonacular.com/recipes/${id}/similar?apiKey=${apiKeyPrincipal}`
   ).then(r => r.json());
 };

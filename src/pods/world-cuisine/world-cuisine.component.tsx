@@ -11,6 +11,7 @@ import {
 import { useHistory } from 'react-router';
 import { routes } from 'core/router/routes';
 import { countries } from './world-cuisine.constants';
+import * as assets from '../../assets';
 
 export const WorldCuisineLayout: React.FC = () => {
   const history = useHistory();
@@ -30,7 +31,7 @@ export const WorldCuisineLayout: React.FC = () => {
             >
               <WorldCuisineFlagName>{item.name}</WorldCuisineFlagName>
               <WorldCuisineFlagImage
-                background={`../src/assets/img/flags/${item.image}`}
+                background={`${assets[item.image]}`}
               ></WorldCuisineFlagImage>
             </WorldCuisineCountryContainer>
           ))}

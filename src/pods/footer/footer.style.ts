@@ -7,6 +7,8 @@ import {
   principalFont,
 } from '../../core/theme/app.style';
 
+import footer from '../../assets/img/footer_tree.png';
+
 export const FooterContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -14,7 +16,7 @@ export const FooterContainer = styled.div`
   margin-top: auto;
   height: auto;
   width: 100%;
-  background-image: url(../src/assets/img/footer_tree.png);
+  background-image: url(${footer});
   background-size: cover;
   background-position: center center;
 `;
