@@ -40,7 +40,7 @@ module.exports = merge.strategy({
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
         options: {
-          name: 'img/[name].[ext]',
+          name: '[name].[ext]',
         },
       },
       {

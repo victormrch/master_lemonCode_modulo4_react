@@ -9,6 +9,8 @@ import {
   MealsCategoryImage,
 } from './meals-category.style';
 
+import * as assets from '../../assets';
+
 export const MealsCategoryLayout: React.FC = () => {
   const history = useHistory();
   const HandleClick = (category: string) => () => {
@@ -23,7 +25,7 @@ export const MealsCategoryLayout: React.FC = () => {
           {mealsCategory.map((item, index) => (
             <MealsCategoryImage
               key={index}
-              background={`../src/assets/img/meals/${item.image}`}
+              background={`${assets[item.image]}`}
               onClick={HandleClick(item.name)}
             ></MealsCategoryImage>
           ))}

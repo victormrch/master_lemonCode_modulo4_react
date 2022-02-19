@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 import { primaryColor, secondaryColor } from '../../core/theme/app.style';
+import monoHome from '../../assets/img/mono_home.png';
+import homeNavbar from '../../assets/img/home_navbar_tree.png';
 
 export const NavbarContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 100%;
-  background-image: url(../src/assets/img/home_navbar_tree.png);
+  background-image: url(${homeNavbar});
   background-size: cover;
 
   @media (max-width: 768px) {
@@ -14,7 +16,7 @@ export const NavbarContainer = styled.div`
   }
 `;
 export const NavbarImage = styled.div`
-  background-image: url(../src/assets/img/mono_home.png);
+  background-image: url(${monoHome});
   width: 7.5rem;
   height: 7.5rem;
   background-size: cover;

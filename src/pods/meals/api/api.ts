@@ -5,6 +5,6 @@ export const getMealsByCategory = async (
   category: string
 ): Promise<MealsResponse> => {
   return fetch(
-    `https://api.spoonacular.com/recipes/complexSearch?&number=100&type=${category}&apiKey=${apiKeySecondary}`
+    `https://api.spoonacular.com/recipes/complexSearch?&number=100&type=${category}&apiKey=${apiKeyPrincipal}`
   ).then(r => r.json());
 };
